@@ -1,0 +1,581 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  background: url("../img/bg.webp") no-repeat center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+.container{
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* HEADER */
+header{
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(to top, #e7d5f5, #d6a5d2ec);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1{
+  font-size: 2em;
+  color: white;
+}
+
+.header h1 a{
+  text-decoration: none;
+  color: white;
+}
+
+.search input{
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.navbar{
+  display: flex;
+  gap: 15px;
+}
+
+.navbar a {
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* NEW COLLECTION & ALL PLUSH THUMBNAILS */
+.newCollection{
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.content{
+  position: relative;
+}
+
+.content img{
+  width: 100%;
+  height: auto;
+}
+
+.contentTitle{
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  color: white;
+  font-size: 1.5em;
+  background-color: #ffffffca;
+  padding: 20px;
+  text-align: center;
+  border: 4px solid white;
+  border-radius: 10px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.contentTitle a{
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: 700;
+  color: black;
+}
+
+.contentTitle:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.minorTitle{
+  font-size: 0.9em;
+  margin-top: 5px;
+  color: black;
+}
+
+
+/* QUOTE */
+.quote{
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.message{
+  font-size: 1.5em;
+  font-style: italic;
+  color: #6255a5;
+  margin: 20px 0;
+}
+
+
+/* PRICING */
+.pricing{
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+    text-align: center;
+}
+
+.pricing table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.pricing th, .pricing td{
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.pricing th{
+    background-color: #f2f2f2;
+    color: #6255a5;
+}
+
+.pricing td{
+    color: #333;
+}
+
+.pricing tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* FEEDBACKS AND REVIEWS */
+.feedback{
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.reviews{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.reviewCard{
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  flex: 0 0 auto;
+}
+
+.reviewCard:hover{
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.reviewContent{
+  margin-bottom: 20px;
+}
+
+.reviewContent p {
+  margin: 0 0 10px;
+  font-size: 1.1em;
+}
+
+.stars{
+  color: #ff9a9e;
+  font-size: 1.2em;
+}
+
+.reviewer{
+  font-size: 0.9em;
+  color: #777;
+}
+
+
+/* SOCIAL MEDIA */
+.socialMedia{
+  text-align: center;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.socialMedia a{
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #6255a5;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.socialMedia a img{
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.socialMedia a:hover {
+  color: #ff9a9e;
+}
+
+
+/* MAIN CONTENT FOR NEW COLLECTION, FAVOURITE, ALL PLUSHIES */
+.mainTitle{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.minorTitle{
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.productCard{
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.productCard img{
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.productCard h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.productCard .price{
+    font-size: 1.1em;
+    color: #007bff;
+    margin: 5px 0;
+}
+
+.productCard .description{
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px 0;
+    flex-grow: 1;
+}
+
+.productCard .addToCart{
+    padding: 10px 20px;
+    background-color: #c5a4d8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.productCard .addToCart:hover {
+    background: linear-gradient(to bottom, #c5a4d8, #7468b1);
+}
+
+/* ABOUT */
+.about{
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.about p{
+    font-size: 18px;
+}
+
+.about img{
+    width: 100%;
+    height: 700px;
+}
+
+
+/* NEWSLETTER */
+.newsletter{
+    margin-top: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter .mainTitle{
+    margin-bottom: 10px;
+}
+
+.newsletter .minorTitle{
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: black;
+    padding: 0 60px;
+}
+
+.newsletter form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter form input{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.newsletter form button{
+    padding: 10px 20px;
+    background-color: #c5a4d8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter form button:hover {
+    background: linear-gradient(to bottom, #c5a4d8, #7468b1);
+}
+
+
+/* SEARCHING */
+.searching {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.searching h2{
+  width: 100%;
+  color: white;
+  background: linear-gradient(to bottom, #c5a4d8, #7468b1);
+}
+
+.searching img{
+  width: 70%;
+  height: 500px;
+  margin: 0 auto;
+
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+form input{
+  margin-right: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 600px;
+}
+
+form button{
+  padding: 10px 20px;
+  background-color: #c5a4d8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: linear-gradient(to bottom, #c5a4d8, #7468b1);
+}
+
+
+/* DATABASE */
+table{
+    margin: 20px 0;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+table th, table td{
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th{
+    background-color: #f2f2f2;
+    color: #6255a5;
+}
+
+table td{
+    color: #333;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #6255a5;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-section p{
+    margin: 0;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .header{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .search input{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .content{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contentTitle{
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    color: white;
+    font-size: 0.7em;
+    background-color: #ffffffca;
+    padding: 20px;
+    text-align: center;
+    border: 4px solid white;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .reviews{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reviewCard{
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .socialMedia{
+    margin: 20px 0;
+  }
+
+  footer{
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .pricing table{
+    font-size: 0.9em;
+  }
+}
